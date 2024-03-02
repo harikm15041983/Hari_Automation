@@ -1,0 +1,29 @@
+package pageObject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class LandingPage {
+	
+	public WebDriver driver;
+
+	By searchText = By.className("search-keyword");
+	
+	By productName = By.cssSelector("h4.product-name");
+	
+	
+	
+public LandingPage(WebDriver driver) {
+	this.driver=driver;
+	}
+
+public LandingPage(WebDriver driver2) {
+	// TODO Auto-generated constructor stub
+	this.driver2=driver;
+}
+
+public void SearchText(String name) {
+	driver.findElement(By.className("search-keyword")).sendKeys(name);
+	}
+	
+}

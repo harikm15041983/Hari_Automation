@@ -1,0 +1,56 @@
+package stepdefinition;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import utils.TestSetupUtils;
+
+public class ProductOfferPage {
+
+	//public WebDriver driver;
+	//public String homepageValue;
+	public String offerpageValue;
+	TestSetupUtils testSetupUtils;
+
+	
+	public ProductOfferPage(TestSetupUtils testSetupUtils) {
+		this.testSetupUtils = testSetupUtils;
+	}
+
+	@Then("User search for item {string} in Offerpage and validate the value")
+	public void user_search_for_item_in_offerpage_and_validate_the_value(String itemName2) {
+		swithOfferPage();
+		testSetupUtils.driver.findElement(By.id("search-field")).sendKeys(itemName2);
+		offerpageValue = testSetupUtils.driver.findElement(By.cssSelector("tr td:nth-child(1)")).getText();
+		System.out.println(offerpageValue + "Item Name Extracted from OFFER Page");
+
+	}
+	
+	public void swithOfferPage() {
+		testSetupUtils.driver.findElement(By.linkText("Top Deals")).click();
+
+		Set<String> s1 = testSetupUtils.driver.getWindowHandles();
+		Iterator<String> il = s1.iterator();
+		String parentWindow = il.next();
+		String childWindow = il.next();
+		testSetupUtils.driver.switchTo().window(childWindow);
+
+		
+	}
+
+	@Then("Validate value in HomePage and Offerpage")
+	public void Validate_value_in_HomePage_and_Offerpage() {
+
+		Assert.assertEquals(testSetupUtils.homepageValue, offerpageValue, "Value Matched");
+
+	}
+
+}

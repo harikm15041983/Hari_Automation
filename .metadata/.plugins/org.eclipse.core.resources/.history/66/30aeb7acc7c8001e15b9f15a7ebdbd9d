@@ -1,0 +1,13 @@
+package helloPackage;
+
+public class MyCar {
+
+	public static void main(String[] args) {
+		
+		Car mm = new Car();
+		
+		mm.carName();
+
+	}
+
+}

@@ -1,0 +1,15 @@
+Feature: Application login
+
+Scenario: Admin Page login
+
+Given User lands on Login page
+When User enter the UserName as "hari" and Password as "krishna"
+Then Home Page is displayed
+And Check Name is displayed
+
+Scenario Outline:: Admin Page login with Multiple Users
+
+Given User lands on Login page
+When User enter the UserName as "hari" and Password as "krishna"
+Then Home Page is displayed
+And Check Name is displayed

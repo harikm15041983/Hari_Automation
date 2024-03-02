@@ -1,0 +1,13 @@
+package helloPackage;
+
+public class LearnConstructor {
+	
+	String name = "Hari";
+	int age = 33;
+	
+	public void person() {
+		
+		System.out.println(name + age);
+	}
+
+}

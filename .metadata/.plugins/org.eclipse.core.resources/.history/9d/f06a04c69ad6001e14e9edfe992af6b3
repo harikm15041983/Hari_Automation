@@ -1,0 +1,24 @@
+package utils;
+
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TestBase {
+	
+	public WebDriver driver;
+	
+	public WebDriver WebDriverManager() {
+		
+		Properties prop = new Properties();
+		
+		if(driver == null) {
+			System.setProperty("webdriver.chrome.driver", "D:\\ChrromeDriver\\chromedriver.exe");
+			driver = new ChromeDriver();
+			driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+		}
+		return driver;
+	}
+
+}

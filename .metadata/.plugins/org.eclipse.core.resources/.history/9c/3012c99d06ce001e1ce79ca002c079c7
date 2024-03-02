@@ -1,0 +1,17 @@
+package Polymorphism;
+
+public class PolymorphismClass {
+	
+	//Method Overloading
+	public void flightDetails(String flightName, String routName) {
+		System.out.println();
+	}
+	
+	public void flightDetails(int flightCount) {
+		System.out.println("FLight Count = " +flightCount);
+	}
+
+	public void flightDetails(String flightAvailable) {
+		System.out.println();
+	}
+}

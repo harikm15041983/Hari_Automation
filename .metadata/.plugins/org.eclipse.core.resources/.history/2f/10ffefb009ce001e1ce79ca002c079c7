@@ -1,0 +1,25 @@
+package Polymorphism;
+
+public class Polycall extends PolymorphismClass{
+	
+	@Override
+	public void flightDetails(int flightCount) {
+		System.out.println("Flight Count Override : "+flightCount);
+		
+	}
+	
+	public static void main(String[] args) {
+		Polycall pc = new Polycall();
+		
+		//Method Overloading
+		pc.flightDetails(5);
+		pc.flightDetails(true);
+		pc.flightDetails(3);
+		
+		pc.flightDetails(5);
+		
+		
+		
+	}
+
+}

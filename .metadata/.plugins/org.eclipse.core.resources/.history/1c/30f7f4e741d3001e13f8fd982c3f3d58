@@ -1,0 +1,14 @@
+package stepDefinitions;
+
+public class hooks {
+
+	
+	public void adminUser() {
+		System.out.println("ADMIN USER BLOCK");
+	}
+	
+	
+	public void normalUser() {
+		System.out.println("NORMAL USER BLOCK");
+	}
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerClass" project="cucumberproject" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="runner.RunnerClass" time="2.321">
+    <testsuite name="To Test Login Functionality" time="2.321">
+      <testcase name="Open Login Screen" classname="To Test Login Functionality" time="2.321">
+        <error>io.cucumber.datatable.UndefinedDataTableTypeException: Can't convert DataTable to List&lt;java.lang.String&gt;.
+Please review these problems:
+
+ - There was a table cell transformer for java.lang.String but the table was too wide to use it.
+   Please reduce the table width to use this converter.
+
+ - There was no table entry or table row transformer registered for java.lang.String.
+   Please consider registering a table entry or row transformer.
+
+Note: Usually solving one is enough&#13;
+	at io.cucumber.datatable.UndefinedDataTableTypeException.listNoConverterDefined(UndefinedDataTableTypeException.java:110)&#13;
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toList(DataTableTypeRegistryTableConverter.java:144)&#13;
+	at io.cucumber.datatable.DataTable.asList(DataTable.java:181)&#13;
+	at stepDefinitions.Login.enter_user_name_and_password(Login.java:31)&#13;
+	at ✽.Enter UserName and Password(file:///C:/Users/Harshiv/eclipse-workspace/HariWorkspace/cucumberproject/FeatureFiles/Login.feature:4)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

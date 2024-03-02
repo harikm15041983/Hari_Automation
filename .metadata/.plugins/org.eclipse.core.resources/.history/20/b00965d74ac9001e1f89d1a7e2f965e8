@@ -1,0 +1,15 @@
+package Inheritance;
+
+public class ModelYear extends Model{
+	
+	public void modYear() {
+		System.out.println(" MoDEL YAER");
+	}
+	
+	@Override
+	public void hasBreak() {
+		super.hasBreak();
+		System.out.println(" Child Has Break");
+	}
+
+}

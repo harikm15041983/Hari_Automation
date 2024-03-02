@@ -1,0 +1,12 @@
+package Polymorphism;
+
+public class Polycall extends PolymorphismClass{
+	
+	public static void main(String[] args) {
+		Polycall pc = new Polycall();
+		pc.flightDetails(5);
+		pc.flightDetails(false);
+		pc.flightDetails(3);
+	}
+
+}

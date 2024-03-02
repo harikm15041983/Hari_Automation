@@ -1,0 +1,9 @@
+package Polymorphism;
+
+public class Polycall extends PolymorphismClass{
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

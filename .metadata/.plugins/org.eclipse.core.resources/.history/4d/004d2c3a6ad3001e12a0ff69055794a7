@@ -1,0 +1,8 @@
+package testRunner;
+
+
+CucumberOptions(feature = "src/test/java/features", glue = "stepdefinition", monochrome = true, 
+plugin = ("pretty" "html:target/cucumber.html"))
+public class TestNGRunner {
+
+}

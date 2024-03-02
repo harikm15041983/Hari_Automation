@@ -1,0 +1,30 @@
+package helloPackage;
+
+public class LearnConstructor {
+	
+	String name;
+	int age;
+	
+	public void persons() {
+		
+				
+		System.out.println(name + "Age is : " + age);
+	}
+	
+	public LearnConstructor(String name) {
+		this.name = name;
+	}
+	
+	
+	public static void main(String[] args) {
+		
+/*		LearnConstructor lc = new LearnConstructor();
+		lc.persons();*/
+		
+		
+		LearnConstructor lc1 = new LearnConstructor("Hari");
+		lc1.
+
+	}
+
+}

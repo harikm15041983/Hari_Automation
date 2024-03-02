@@ -1,0 +1,9 @@
+package Inheritance;
+
+public class ModelYear {
+	
+	public void modYear() {
+		System.out.println(" MoDEL YAER");
+	}
+
+}

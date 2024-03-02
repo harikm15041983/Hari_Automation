@@ -1,0 +1,60 @@
+package stepdefinition;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class ProductSearchValidate {
+
+	public WebDriver driver;
+
+	@Given("User in GrenKart Landing page")
+	public void user_in_gren_kart_landing_page() {
+
+		System.setProperty("webdriver.chrome.driver", "D:\\ChrromeDriver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+		Assert.assertTrue(true, "Open Chrome Browser Success");
+
+	}
+
+	@When("User search for item {string} and get the actual value")
+	public void user_search_for_item_and_get_the_actual_value(String itemName) {
+
+		// driver.findElements(By.xpath("//*[@id=\"root\"]/div/header/div/div[2]/form/input"));
+
+		driver.findElement(By.className("search-keyword")).sendKeys(itemName);
+		// Boolean a =
+		// driver.findElement(By.className("product-name")).getText().contains(itemName);
+		// Assert.assertTrue(a, "Item Name Displayed");
+		// String value =
+		// driver.findElement(By.className("product-name")).getText().split("-")[0].trim();
+		String value = driver.findElement(By.cssSelector("h4.product-name")).getText().split("-")[0].trim();
+		System.out.println(value + "Item Name Extracted from Home Page");
+
+	}
+
+	@Then("User search for item {string} in Offerpage and validate the value")
+	public void user_search_for_item_in_offerpage_and_validate_the_value(String itemName2) {
+
+		driver.findElement(By.linkText("Top Deals")).click();
+
+		Set<String> s1 = driver.getWindowHandles();
+		Iterator<String> il = s1.iterator();
+		String parentWindow = il.next();
+		String childWindow = il.next();
+		driver.switchTo().window(childWindow);
+		
+		driver.findElement(By.id("search-field")).sendKeys(itemName2);
+
+	}
+
+}

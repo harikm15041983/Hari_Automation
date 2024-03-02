@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerClass" project="cucumberproject" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="runner.RunnerClass" time="4.462">
+    <testsuite name="This is to test Google search" time="4.462">
+      <testcase name="Google Search Scenario" classname="This is to test Google search" time="4.462">
+        <error>java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because the return value of "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" is null&#13;
+	at stepDefinitions.OpenGoogleDefinitions.user_should_see_the_search_result(OpenGoogleDefinitions.java:46)&#13;
+	at ✽.user should see the search result(file:///C:/Users/Harshiv/eclipse-workspace/HariWorkspace/cucumberproject/FeatureFiles/OpenGoogle.feature:6)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

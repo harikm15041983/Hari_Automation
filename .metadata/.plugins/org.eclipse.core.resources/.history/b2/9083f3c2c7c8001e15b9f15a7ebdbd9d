@@ -1,0 +1,15 @@
+package helloPackage;
+
+public class MyCar {
+
+	public static void main(String[] args) {
+		
+		Car mm = new Car();
+		
+		String aa = mm.carName();
+		
+		System.out.println(aa);
+
+	}
+
+}

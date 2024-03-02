@@ -1,0 +1,12 @@
+package Inheritance;
+
+public class Vehicle {
+	
+	public void hasHorn() {
+		System.out.println(" Has Horn");
+			}
+
+	public void hasBreak() {
+		System.out.println(" Has Break");
+	}
+}

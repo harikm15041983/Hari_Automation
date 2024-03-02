@@ -1,0 +1,13 @@
+package cucumberOptions;
+
+import io.cucumber.testng.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+
+@CucumberOptions(features = "src/test/java/features", 
+		glue="stepDefinitions", monochrome = true, tags = "@GetListofValue"),
+plugin = {"pretty", "html:target/cucumber.html"}
+//AbstractTestNGCucumberTests
+
+public class TestNG_Runner extends AbstractTestNGCucumberTests{
+	
+}

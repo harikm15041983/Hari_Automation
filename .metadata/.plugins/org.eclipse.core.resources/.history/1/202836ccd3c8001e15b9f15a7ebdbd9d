@@ -1,0 +1,19 @@
+package helloPackage;
+
+public class LearnConstructor {
+	
+	//String name = "Hari";
+	//int age = 33;
+	
+	//public void persons() {
+		
+		//String name = "Hari";
+		
+		//System.out.println("sadddddddddddd");
+	//}
+	
+	public static void main(String[] args) {
+		System.out.println("sadddddddddddd");
+	}
+
+}

@@ -1,0 +1,19 @@
+package helloPackage;
+
+import java.util.Arrays;
+
+public class LearnArrays {
+	
+	public void arr () {
+		String[] names = {"Hari", "Krishna", "Moorthy"};
+		
+		System.out.println(Arrays.toString(names));
+	}
+	
+	public static void main(String[] args) {
+		LearnArrays la = new LearnArrays();
+		la.arr();
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package pageObject;
+
+import org.openqa.selenium.By;
+
+public class LandingPage {
+
+	By searchText = By.className("search-keyword");
+	
+	By productName = By.cssSelector("h4.product-name");
+	
+}

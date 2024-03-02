@@ -1,0 +1,7 @@
+Feature: Application login
+Scenario: Admin Page login
+
+Given User lands on Login page
+When User enter the UserName and Password
+Then Home Page is displayed
+And Check Name is displayed

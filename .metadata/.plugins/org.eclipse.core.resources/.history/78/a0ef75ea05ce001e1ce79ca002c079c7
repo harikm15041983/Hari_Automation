@@ -1,0 +1,13 @@
+package Polymorphism;
+
+public class PolymorphismClass {
+	
+	public void flightDetails(String flightName, String routName) {
+		System.out.println();
+	}
+	
+	public void flightDetails(int flightCount) {
+		System.out.println();
+	}
+
+}

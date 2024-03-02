@@ -1,0 +1,22 @@
+package Polymorphism;
+
+public class Polycall extends PolymorphismClass{
+	
+	public void flightDetails(String name, String route, boolean flightAvailabe) {
+		System.out.println("Name"+name + "Route "+ route + "IsAvailable"+flightAvailabe);
+		
+	}
+	
+	public static void main(String[] args) {
+		Polycall pc = new Polycall();
+		
+		//Method Overloading
+		pc.flightDetails(5);
+		pc.flightDetails(true);
+		pc.flightDetails(3);
+		
+		
+		
+	}
+
+}

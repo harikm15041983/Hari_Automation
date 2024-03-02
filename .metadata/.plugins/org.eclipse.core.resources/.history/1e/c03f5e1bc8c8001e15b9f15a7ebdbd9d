@@ -1,0 +1,25 @@
+package helloPackage;
+
+public class Car {
+	
+	String carname = "Nissan";
+	String carmodel = "Altima";
+
+	public String carName() {
+		
+		System.out.println(carname);
+		return carname;
+	
+	}
+	
+	public boolean isAvailable() {
+		
+		System.out.println("Car is Available");
+		
+		return true;
+		
+	}
+	
+	
+	
+}

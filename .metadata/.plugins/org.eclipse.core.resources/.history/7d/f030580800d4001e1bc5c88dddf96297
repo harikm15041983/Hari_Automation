@@ -1,0 +1,15 @@
+package pageObject;
+
+import org.openqa.selenium.By;
+
+public class LandingPage {
+
+	By searchText = By.className("search-keyword");
+	
+	By productName = By.cssSelector("h4.product-name");
+	
+	public void SearchText(String name) {
+		testSetupUtils.driver.findElement(By.className("search-keyword")).sendKeys(name);
+	}
+	
+}

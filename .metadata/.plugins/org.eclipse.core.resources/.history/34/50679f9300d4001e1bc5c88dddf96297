@@ -1,0 +1,50 @@
+package stepdefinition;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import utils.TestSetupUtils;
+
+public class ProductHomePage {
+
+	//public WebDriver driver;
+	public String homepageValue;
+	//public String offerpageValue;
+	TestSetupUtils testSetupUtils;
+	
+	public ProductHomePage(TestSetupUtils testSetupUtils) {
+		this.testSetupUtils= testSetupUtils;
+	}
+
+	@Given("User in GrenKart Landing page")
+	public void user_in_gren_kart_landing_page() {
+
+		System.setProperty("webdriver.chrome.driver", "D:\\ChrromeDriver\\chromedriver.exe");
+		testSetupUtils.driver = new ChromeDriver();
+		testSetupUtils.driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+
+
+
+	}
+
+	@When("User search for item {string} and get the actual value")
+	public void user_search_for_item_and_get_the_actual_value(String itemName) throws InterruptedException {
+		
+		boolean logo = testSetupUtils.driver.findElement(By.className("search-keyword")).isDisplayed();
+		Assert.assertTrue(logo, "PAGE NAVIAGTED TO HOMEPAGE AND LOGO DISPLAYED");
+
+		testSetupUtils.driver.findElement(By.className("search-keyword")).sendKeys(itemName);
+		Thread.sleep(2000);
+		testSetupUtils.homepageValue = testSetupUtils.driver.findElement(By.cssSelector("h4.product-name")).getText().split("-")[0].trim();
+		System.out.println(homepageValue + "Item Name Extracted from Home Page");
+
+	}
+}

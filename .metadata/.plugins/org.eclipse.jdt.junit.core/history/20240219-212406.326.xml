@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerClass" project="cucumberproject" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="runner.RunnerClass" time="3.153">
+    <testsuite name="To Test Login Functionality" time="3.153">
+      <testcase name="Open Login Screen" classname="To Test Login Functionality" time="3.153"/>
+    </testsuite>
+  </testsuite>
+</testrun>
